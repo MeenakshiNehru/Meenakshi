@@ -1,0 +1,44 @@
+import java.io.*;
+import java.util.*;
+import java.sql.*;
+
+class donor()
+{
+   int GetDonorDetails()
+   {
+	 Scanner kb=new Scanner(System.in);
+        
+	System.out.println("Enter Donor Id:");
+	int donorId=kb.nextInt();
+	
+	System.out.println("Enter Donor Name:");
+        string donorName=kb.nextLine();
+
+        ----- get all details--------------
+ 	----------then add in database--------
+	Class.forName("com.mysql.jdbc.Driver");  
+
+	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/DATABASEName","root","root");  
+        // root is username and password  
+
+	Statement stmt=con.createStatement(); 
+	
+	String sql = "INSERT INTO donor" + "VALUES (donorId,donorName, ---all details---)";
+ 
+	 stmt.executeUpdate(sql);
+	
+ 	con.close();  
+        
+        return 1;
+	
+	
+    
+    
+   }
+    
+          
+          
+         
+
+
+} 

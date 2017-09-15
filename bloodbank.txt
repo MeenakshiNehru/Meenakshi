@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+class  BloodBank
+{
+   public static void main(String args[]) 
+     {
+        
+	Scanner br=new Scanner (System.in);
+	System.out.println("1.Register Donor");
+        System.out.println("2.Register Patient");
+        System.out.println("3.Check Availabilty");
+	System.out.println("3.View request");
+        System.out.println("Enter your choice");
+  
+	
+	choice=br.nextInt();
+        switch(choice)
+         {
+	   case 1:
+           Donor dr=new Donor();
+           int status=dr.GetDonorDetails();
+	   if(status==1)
+               System.out.println("Donor added");
+	   else
+	     System.out.println("Not added");
+	 
+
+            case 2:
+                 
+               ------do same for patient registry---------
+ 
+            case 3:
+            
+	   
+
+            
+          }
+
+     }
+
+
+}
